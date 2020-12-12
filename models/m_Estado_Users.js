@@ -1,6 +1,6 @@
 'use strict'
 
-var mongoose = require('mongoose'),
+var mongoose = require('mongoose');
 var Schema   = mongoose.Schema
 var EstadoUsersModel = new Schema({
 	estado: { type: String, required: true, trim: true, },

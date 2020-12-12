@@ -43,9 +43,4 @@ app.use(set.path, route_tipo_empresa);
 
 /************************************************/
 
-process.on('uncaughtException', (err) => {
-    console.error('There was an uncaught error');
-    console.log(err);
-});
-
 module.exports = app

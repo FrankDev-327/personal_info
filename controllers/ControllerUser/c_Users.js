@@ -151,7 +151,6 @@ async function uploadPerfil(req, res) {
 }
 
 module.exports = {
-    validateRoutes,
     uploadPerfil,
     CreateUsers,
     UpdateUsers,
