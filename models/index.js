@@ -7,4 +7,5 @@ module.exports = {
     TipoContactoModel: require('./m_Tipos_Contacto'),
     SuscriberModel: require('./m_Suscribers'),
     TipoEmpresaModel: require('./m_TipoEmpresa'),
+    
 }
