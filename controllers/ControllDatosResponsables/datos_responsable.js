@@ -30,7 +30,6 @@ async function createDatosResponsable(req, res) {
                 DV: params.PrimerNDVombre,
                 Nacionalidad: params.Nacionalidad
             }
-
             data = await DatosResponsableModel.findOneAndUpdate(_id, setUpdate, ng);
             return res.status(200).json({data, message: 'Datos del responsable.', code: 'API_DR_200'});
         }

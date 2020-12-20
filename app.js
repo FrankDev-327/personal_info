@@ -25,7 +25,8 @@ app.use(require('morgan')('dev'));
 app.use((req, res, next) => {
     res.header('Content-Type:image/png');
     res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Authorization,X-API-KEY,Origin,X-Rquested-Widht,' + 'Content-Type,Accept,Acces-Control-Allow-Request-Method');
+    res.header('Access-Control-Allow-Headers', 'Authorization,X-API-KEY,Origin,X-Rquested-Widht,' 
+    + 'Content-Type,Accept,Acces-Control-Allow-Request-Method');
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
     res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
     next();
