@@ -12,5 +12,4 @@ RUN npm install
 # RUN npm ci --only=production
 # Bundle app source
 COPY . /app
-CMD ["npm", "start"]
 EXPOSE 5006
