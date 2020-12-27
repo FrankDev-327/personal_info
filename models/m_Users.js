@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const UsersSchema = Schema({
+   following: [ { type: Schema.Types.ObjectId, ref: 'Users' } ],
+   followers: [ { type: Schema.Types.ObjectId, ref: 'Users' } ],
    nombre: { type: String, trim: true },
    provincia: { type: String, trim: true },
    apellido: { type: String, trim: true },
@@ -20,6 +22,17 @@ const UsersSchema = Schema({
    estado: { type: Boolean, default: true },
    perfil: { type: String }
 });
+
+UsersSchema.methods.follow = function (user_id) {
+   if (this.following.indexOf(user_id) === -1) {
+   this.following.push(user_id) 
+   }
+   return this.save()
+}
+
+UsersSchema.methods.addFollower = function (fs) {
+   this.followers.push(fs) 
+}
 
 const User = mongoose.model('Users', UsersSchema);
 module.exports = User
