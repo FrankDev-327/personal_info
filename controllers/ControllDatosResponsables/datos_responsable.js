@@ -6,7 +6,7 @@ async function createDatosResponsable(req, res) {
     try {
         var data;
         var params = req.body;
-        var susId = {
+        /*var susId = {
             suscriptorId: req.suscriber._id
         };
         var info = await DatosResponsableModel.findOne(susId).exec();
@@ -32,10 +32,10 @@ async function createDatosResponsable(req, res) {
             }
             data = await DatosResponsableModel.findOneAndUpdate(_id, setUpdate, ng);
             return res.status(200).json({data, message: 'Datos del responsable.', code: 'API_DR_200'});
-        }
+        }*/
 
         var sus = new DatosResponsableModel();
-        sus.suscriptorId = req.suscriber._id;
+        sus.suscriptorId = params.suscriptorId;  //req.suscriber._id;
         sus.PrimerNombre = params.PrimerNombre
         sus.Segundonombre = params.Segundonombre
         sus.ApellidoPaterno = params.ApellidoPaterno
